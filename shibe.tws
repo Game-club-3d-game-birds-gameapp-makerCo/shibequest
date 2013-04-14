@@ -1,0 +1,803 @@
+(dp0
+S'buildDestination'
+p1
+V/Users/vlcice/Documents/Twine/shibe/shibe.html
+p2
+sS'saveDestination'
+p3
+V/Users/vlcice/Documents/Twine/shibe/shibe.tws
+p4
+sS'target'
+p5
+S'sugarcane'
+p6
+sS'storyPanel'
+p7
+(dp8
+S'widgets'
+p9
+(lp10
+(dp11
+S'selected'
+p12
+I00
+sS'pos'
+p13
+(lp14
+I10
+aI10
+asS'passage'
+p15
+(itiddlywiki
+Tiddler
+p16
+(dp17
+S'text'
+p18
+V<<set $shibe = {hp: 5, dead: false}>> <<if $over>> <<stopsound $over>> <<set $over = false>> <<endif>> <<loopsound "journ.ogg">>\u000a<html><div class="center red">wow</div>\u000a<div class="centerright green">shibe warrior gonna war</div></html>so <<cyclinglink $primary_stat "brave" "smrat">>\u000a\u000a<<cyclinglink $secondary_stat "u don kno me" "omg wow so frenz">>\u000a\u000a[[ok wow so quest]]
+p19
+sS'tags'
+p20
+(lp21
+Vsmaufrai
+p22
+asS'created'
+p23
+ctime
+struct_time
+p24
+((I2013
+I4
+I12
+I22
+I59
+I21
+I4
+I102
+I1
+tp25
+(dp26
+tp27
+Rp28
+sS'modified'
+p29
+g28
+sS'title'
+p30
+VStart
+p31
+sbsa(dp32
+g12
+I00
+sg13
+(lp33
+I710
+aI150
+asg15
+(itiddlywiki
+Tiddler
+p34
+(dp35
+g18
+V.center\u000a{\u000atext-align: center;\u000a}\u000a\u000a.right\u000a{\u000atext-align: right;\u000a}\u000a\u000a.centerright\u000a{\u000amargin-left: 80%;\u000a}\u000a\u000a.centerleft\u000a{\u000amargin-right: 80%;\u000a}\u000a\u000a.red {color:red;}\u000a.blue {color:#AFEEEE;}\u000a.green {color:#8FBC8F;}\u000a.pink {color:#FFB6C1;}\u000a.black {color:black;}\u000a.lime {color:#7CFC00;}\u000aa:link {color:#00BFFF;}\u000a\u000a.passage\u000a{\u000awidth: 500px;\u000aheight: 500px;\u000aoverflow-x: visible;\u000aoverflow-y: visible;\u000abackground-color: black;\u000abackground-repeat: no-repeat;\u000abackground-position: center;\u000afont-family: "Comic Sans MS";\u000afont-size: 1.5em;\u000acolor: #FFEBCD;\u000a}\u000a\u000a.passage .content\u000a{\u000apadding: 50px 85px 50px 85px;\u000a}\u000a\u000a[data-tags~=smaufrai]\u000a{\u000abackground-image:url('smaufrai.jpg');\u000a}\u000a\u000a[data-tags~=intro]\u000a{\u000abackground-image:url('intro.jpg');\u000a}\u000a\u000a[data-tags~=meetenemy1]\u000a{\u000abackground-image:url('enemy1.jpg');\u000a}\u000a\u000a[data-tags~=dead]\u000a{\u000abackground-image:url('dead.jpg');\u000a}\u000a\u000a[data-tags~=fight1]\u000a{\u000abackground-image:url('fight1.jpg');\u000a}\u000a\u000a[data-tags~=enemy2]\u000a{\u000abackground-image:url('enemy2.jpg');\u000a}\u000a\u000a[data-tags~=enemy2ghost]\u000a{\u000abackground-image:url('enemy2ghost.jpg');\u000a}\u000a\u000a[data-tags~=scream]\u000a{\u000abackground-image:url('scream.jpg');\u000a}\u000a\u000a[data-tags~=treasure]\u000a{\u000abackground-image:url('friends.jpg');\u000a}
+p36
+sg20
+(lp37
+Vstylesheet
+p38
+asg23
+g24
+((I2013
+I4
+I12
+I23
+I1
+I24
+I4
+I102
+I1
+tp39
+(dp40
+tp41
+Rp42
+sg29
+g42
+sg30
+VCSS
+p43
+sbsa(dp44
+g12
+I00
+sg13
+(lp45
+I710
+aI10
+asg15
+(itiddlywiki
+Tiddler
+p46
+(dp47
+g18
+Vversion.extensions["cyclinglinkMacro"]={major:3,minor:1,revision:1};macros.cyclinglink={handler:function(a,b,c){var l=Wikifier.createInternalLink(a,null);\u000al.className="internalLink cyclingLink";l.setAttribute("data-cycle",0);var v="";var end=false;\u000aif(c.length&&c[0][0]=="$"){v=c[0].slice(1);c.shift();}if(c[c.length-1]=="end"){end=true;\u000ac.pop();}var h=state.history[0].variables;for(var i=0;i<c.length;i++){var on=(i==Math.max(c.indexOf(h[v]),0));\u000avar d=insertElement(null,"span",null,"cyclingLink"+((on)?"En":"Dis")+"abled");if(on){h[v]=c[ i ];\u000al.setAttribute("data-cycle",i);}insertText(d,c[ i ]);l.appendChild(d);}l.onclick=function(){var t=this.childNodes;\u000avar d="cyclingLink";var u=this.getAttribute("data-cycle")-0;var m=t.length;if(end&&u==m-2){var n=this.removeChild(t[u+1]);\u000an.className=d+"End";this.parentNode.replaceChild(n,this);return;}t[u].classList.toggle(d+"Enabled");\u000at[u].classList.toggle(d+"Disabled");u=(u+1)%m;if(v){h[v]=c[u];}t[u].classList.toggle(d+"Enabled");\u000at[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:function(){addStyle(".cyclingLinkDisabled { display:none; } ");\u000a}};macros.cyclinglink.init();\u000a
+p48
+sg20
+(lp49
+Vscript
+p50
+asg23
+g24
+((I2013
+I4
+I13
+I12
+I12
+I20
+I5
+I103
+I1
+tp51
+(dp52
+tp53
+Rp54
+sg29
+g54
+sg30
+Vcyclinglink
+p55
+sbsa(dp56
+g12
+I00
+sg13
+(lp57
+I10
+aI150
+asg15
+(itiddlywiki
+Tiddler
+p58
+(dp59
+g18
+V<<set $shibe.primary = $primary_stat>>\u000a<<if $secondary_stat == "u don kno me">> <<set $shibe.secondary = "aggressive">> <<endif>> <<if $secondary_stat == "omg wow so frenz">> <<set $shibe.secondary = "charismatic">> <<endif>> <<if $shibe.secondary == "aggressive">> <<set $shibe.strength = 5>> <<else>> <<set $shibe.strength = 3>> <<endif>>\u000a\u000a<html><div class="centerleft pink">empty</div>\u000a\u000a<div class="green">sorrow</div>\u000a\u000a<div class="right red">the fate of da kingdom</div>\u000a\u000a<div class="center pink">lol brave knight u are my onli hope</div></html>\u000a\u000a[[on da road|encounter1]]
+p60
+sg20
+(lp61
+Vintro
+p62
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I17
+I50
+I5
+I103
+I1
+tp63
+(dp64
+tp65
+Rp66
+sg29
+g66
+sg30
+Vok wow so quest
+p67
+sbsa(dp68
+g12
+I00
+sg13
+(lp69
+I150
+aI150
+asg15
+(itiddlywiki
+Tiddler
+p70
+(dp71
+g18
+V<<stopsound "journ.ogg">> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>>\u000a\u000a<html><div class="center red">u want to get wit me bitch</div>\u000a\u000a<div class="centerright blue">u messin wit da wrong shibe</div></html>\u000a\u000a[[fight|fight enemy1]]\u000a\u000a[[talk|talk enemy1]]
+p72
+sg20
+(lp73
+Vmeetenemy1
+p74
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I19
+I41
+I5
+I103
+I1
+tp75
+(dp76
+tp77
+Rp78
+sg29
+g78
+sg30
+Vencounter1
+p79
+sbsa(dp80
+g12
+I01
+sg13
+(lp81
+I150
+aI10
+asg15
+(itiddlywiki
+Tiddler
+p82
+(dp83
+g18
+V<<stopsound $sound>> <<set $over = "shibe over.ogg">> <<playsound $over>> <html><div class="center red">wow</div>\u000a\u000a<div class="centerright green">so dead</div>\u000a\u000a<div class="centerleft blue">is this the end of shibe</div>\u000a\u000a<div class="center pink">this story is not hppay end~</div></html>\u000a\u000a[[restart|Start]]
+p84
+sg20
+(lp85
+Vdead
+p86
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I40
+I2
+I5
+I103
+I1
+tp87
+(dp88
+tp89
+Rp90
+sg29
+g90
+sg30
+Vdead
+p91
+sbsa(dp92
+g12
+I00
+sg13
+(lp93
+I290
+aI150
+asg15
+(itiddlywiki
+Tiddler
+p94
+(dp95
+g18
+V<<set $enemy = {strength: 2, hp: 5, dead: false}>> <<stopsound $sound>> <<set $sound = "the war warrior.ogg">> <<loopsound $sound>>\u000a\u000a<html><div class="center pink">its time</div>\u000a\u000a<br><br>\u000a\u000a<div class="right green">are you ready for shibe</div></html>\u000a\u000a[[attack|attack enemy 1]]
+p96
+sg20
+(lp97
+Vfight1
+p98
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I45
+I4
+I5
+I103
+I1
+tp99
+(dp100
+tp101
+Rp102
+sg29
+g102
+sg30
+Vfight enemy1
+p103
+sbsa(dp104
+g12
+I00
+sg13
+(lp105
+I150
+aI290
+asg15
+(itiddlywiki
+Tiddler
+p106
+(dp107
+g18
+V<<if $shibe.secondary == "charismatic">>\u000a\u000a<html><div class="right green">the code of the honores</div> <br><br>\u000a\u000a<div class="pink">the way of the warriors</div> <br><br><br>\u000a\u000a<div class="center blue">shibe know respect</div></html>\u000a\u000a[[go from this place|encounter2]]\u000a\u000a<<else>>\u000a\u000a<html><div class="pink">no</div>\u000a\u000a<div class="red right">this ends now</div></html>\u000a\u000a[[take on me|fight enemy1]]\u000a\u000a<<endif>>
+p108
+sg20
+(lp109
+Vmeetenemy1
+p110
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I52
+I21
+I5
+I103
+I1
+tp111
+(dp112
+tp113
+Rp114
+sg29
+g114
+sg30
+Vtalk enemy1
+p115
+sbsa(dp116
+g12
+I00
+sg13
+(lp117
+I430
+aI150
+asg15
+(itiddlywiki
+Tiddler
+p118
+(dp119
+g18
+V<<display "combat loop 1">>\u000a\u000a<<if $enemy.dead && !$shibe.dead>>\u000a[[thats what i thought|encounter2]]\u000a<<else>>\u000a<<if $shibe.dead>>\u000a[[wat noooooo|dead]]\u000a<<else>>\u000a[[hit me again|attack enemy 1]]\u000a<<endif>>\u000a<<endif>>
+p120
+sg20
+(lp121
+Vfight1
+p122
+asg23
+g24
+((I2013
+I4
+I13
+I13
+I55
+I0
+I5
+I103
+I1
+tp123
+(dp124
+tp125
+Rp126
+sg29
+g126
+sg30
+Vattack enemy 1
+p127
+sbsa(dp128
+g12
+I00
+sg13
+(lp129
+I430
+aI10
+asg15
+(itiddlywiki
+Tiddler
+p130
+(dp131
+g18
+V<<set $dmg = Math.floor(Math.random() * $shibe.strength) + 1>>\u000a\u000a<<set $get = Math.floor(Math.random() * $enemy.strength) + 1>>\u000a\u000a<html><div class="center blue">grrrrr</div></html>\u000a\u000ayou hit for <<print $dmg>> <<set $enemy.hp -= $dmg>> <<if $enemy.hp < 1>> <<set $enemy.dead = true>> <<endif>>\u000a\u000a<html><div class="center red">omg what</div></html>\u000a\u000aenemy hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<set $shibe.dead = true>> <<endif>>
+p132
+sg20
+(lp133
+sg23
+g24
+((I2013
+I4
+I13
+I13
+I55
+I44
+I5
+I103
+I1
+tp134
+(dp135
+tp136
+Rp137
+sg29
+g137
+sg30
+Vcombat loop 1
+p138
+sbsa(dp139
+g12
+I00
+sg13
+(lp140
+I430
+aI290
+asg15
+(itiddlywiki
+Tiddler
+p141
+(dp142
+g18
+V<<if $sound != "wheel of fate.ogg">> <<stopsound $sound>> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>> <<endif>> <html><div class="right green">wat</div>\u000a\u000a<br><br><br>\u000a\u000a<div class="red">shadow what is this</div></html>\u000a\u000a[[go look|enemy 2 ghost]]
+p143
+sg20
+(lp144
+Venemy2
+p145
+asg23
+g24
+((I2013
+I4
+I13
+I14
+I5
+I18
+I5
+I103
+I1
+tp146
+(dp147
+tp148
+Rp149
+sg29
+g149
+sg30
+Vencounter2
+p150
+sbsa(dp151
+g12
+I00
+sg13
+(lp152
+I430
+aI430
+asg15
+(itiddlywiki
+Tiddler
+p153
+(dp154
+g18
+V\u000a<html><div class="center red">no not shibe ghost</div></html>\u000a\u000a<<if $shibe.primary == "smrat">> <html>\u000a\u000a<div class="right pink">shiba riddles</div>\u000a\u000a<div class="centerleft black">its the only way</div>\u000a\u000a<div class="center red">what is blacker than night</div>\u000a\u000a<div class="blue centerright">darker than shade</div>\u000a\u000a<div class="lime center">sharper than any blade</div></html>\u000a\u000a<<cyclinglink $riddle "death" "shibe soul">> <<if $sound != "spookshib.ogg">> <<stopsound $sound>> <<set $sound = "spookshib.ogg">> <<loopsound $sound>> <<endif>>\u000a\u000a[[i kno|try riddle]]\u000a\u000a<<else>>\u000a\u000a<html><div class="right pink">ghost fight</div>\u000a\u000a<div class="center blue">its the only way</div></html> <<set $enemy = {strength: 3, hp: 4, dead: false}>>\u000a\u000a[[take me on|attack enemy 2]]\u000a\u000a<<endif>>
+p155
+sg20
+(lp156
+Venemy2ghost
+p157
+asg23
+g24
+((I2013
+I4
+I13
+I14
+I10
+I47
+I5
+I103
+I1
+tp158
+(dp159
+tp160
+Rp161
+sg29
+g161
+sg30
+Venemy 2 ghost
+p162
+sbsa(dp163
+g12
+I00
+sg13
+(lp164
+I570
+aI290
+asg15
+(itiddlywiki
+Tiddler
+p165
+(dp166
+g18
+V<<set $dmg = Math.floor(Math.random() * $shibe.strength) + 1>>\u000a\u000a<<set $get = Math.floor(Math.random() * $enemy.strength) + 1>>\u000a\u000a<html><div class="blue">grrrrr</div></html>\u000a\u000ayou hit for <<print $dmg>> <<set $enemy.hp -= $dmg>> <<if $enemy.hp < 1>> <<set $enemy.dead = true>> <<endif>>\u000a\u000a<html><div class="red">wooooo no</div></html>\u000a\u000aghost hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<set $shibe.dead = true>> <<endif>>
+p167
+sg20
+(lp168
+sg23
+g24
+((I2013
+I4
+I13
+I14
+I35
+I23
+I5
+I103
+I1
+tp169
+(dp170
+tp171
+Rp172
+sg29
+g172
+sg30
+Vcombat loop 2
+p173
+sbsa(dp174
+g12
+I00
+sg13
+(lp175
+I290
+aI430
+asg15
+(itiddlywiki
+Tiddler
+p176
+(dp177
+g18
+V<<if $riddle == "death">>\u000a\u000a<html><div class="center lime">no wrong</html>\u000a\u000a[[once more|enemy 2 ghost]]\u000a\u000a<<else>>\u000a\u000a<html><div class="center red">u may pass</html>\u000a\u000a[[at last the treasure]]\u000a\u000a<<endif>>
+p178
+sg20
+(lp179
+Vscream
+p180
+asg23
+g24
+((I2013
+I4
+I13
+I14
+I36
+I49
+I5
+I103
+I1
+tp181
+(dp182
+tp183
+Rp184
+sg29
+g184
+sg30
+Vtry riddle
+p185
+sbsa(dp186
+g12
+I00
+sg13
+(lp187
+I570
+aI430
+asg15
+(itiddlywiki
+Tiddler
+p188
+(dp189
+g18
+V<html><div class="red">shibe this is ur most fersome foe yet</div></html>\u000a<<display "combat loop 2">>\u000a\u000a<<if $enemy.dead && !$shibe.dead>>\u000a[[at last the treasure]]\u000a<<else>>\u000a<<if $shibe.dead>>\u000a[[wat noooooo|dead]]\u000a<<else>>\u000a[[hit me again|attack enemy 2]]\u000a<<endif>>\u000a<<endif>>
+p190
+sg20
+(lp191
+Vscream
+p192
+asg23
+g24
+((I2013
+I4
+I13
+I14
+I38
+I57
+I5
+I103
+I1
+tp193
+(dp194
+tp195
+Rp196
+sg29
+g196
+sg30
+Vattack enemy 2
+p197
+sbsa(dp198
+g12
+I00
+sg13
+(lp199
+I430
+aI570
+asg15
+(itiddlywiki
+Tiddler
+p200
+(dp201
+g18
+V<<stopsound $sound>> <<playsound "the bells of friendship ring true.ogg">>\u000a\u000a<html><div class="right pink">lol</div>\u000a\u000a<div class="left lime">shibe friendship</div>\u000a\u000a<div class="centerright blue">was da tru treasure all along</div>\u000a\u000a<div class="center">~end~</div></html>\u000a\u000a[[credits]]
+p202
+sg20
+(lp203
+Vtreasure
+p204
+asg23
+g24
+((I2013
+I4
+I13
+I14
+I42
+I30
+I5
+I103
+I1
+tp205
+(dp206
+tp207
+Rp208
+sg29
+g208
+sg30
+Vat last the treasure
+p209
+sbsa(dp210
+g12
+I00
+sg13
+(lp211
+I710
+aI430
+asg15
+(itiddlywiki
+Tiddler
+p212
+(dp213
+g18
+Vshibequest
+p214
+sg20
+(lp215
+sg23
+g24
+((I2013
+I4
+I13
+I15
+I8
+I58
+I5
+I103
+I1
+tp216
+(dp217
+tp218
+Rp219
+sg29
+g219
+sg30
+VStoryTitle
+p220
+sbsa(dp221
+g12
+I00
+sg13
+(lp222
+I430
+aI710
+asg15
+(itiddlywiki
+Tiddler
+p223
+(dp224
+g18
+VText/etc: Ms. Tea\u000aMusic: SF\u000a\u000aMost photos used under Creative Commons licenses.\u000a\u000a* [[smaufrai from @DogSolutions|http://twitter.com/DogSolutions/status/210836474025881600/photo/1]]\u000a* [[tokyo the shiba by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5958945531/]]\u000a* [[Shiba inu by Yuya Tamai on Flickr|http://www.flickr.com/photos/tamaiyuya/6073282904/]]\u000a* [[Shiba in the snow by Truk71 on Flickr|http://www.flickr.com/photos/24161110@N00/399356547/]]\u000a* [[shiba rinji wrestles with shiba taro by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/6174353458/]]\u000a* [[shiba shadow by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/7207054956/]]\u000a* [[Shiba #2 by atubbs on Flickr|http://www.flickr.com/photos/atubbs/3189700418/]]\u000a* [[taro shiba yawning by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5106890898/]]\u000a* [[shiba siblings (kiyom & taro) & their lazy sunday|http://www.flickr.com/photos/_tar0_/7390117678/]]\u000a\u000a<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html>
+p225
+sg20
+(lp226
+sg23
+g24
+((I2013
+I4
+I13
+I15
+I27
+I8
+I5
+I103
+I1
+tp227
+(dp228
+tp229
+Rp230
+sg29
+g230
+sg30
+Vcredits
+p231
+sbsa(dp232
+g12
+I00
+sg13
+(lp233
+I710
+aI290
+asg15
+(itiddlywiki
+Tiddler
+p234
+(dp235
+g18
+V\u000a(function () {\u000a  version.extensions['soundMacros'] = {\u000a    major: 1,\u000a    minor: 1,\u000a    revision: 1\u000a  };\u000a  var p = macros['playsound'] = {\u000a    soundtracks: {},\u000a    handler: function (a, b, c, d) {\u000a      var loop = function (m) {\u000a          if (m.loop == undefined) {\u000a            m.loopfn = function () {\u000a              this.play();\u000a            };\u000a            m.addEventListener('ended', m.loopfn, 0);\u000a          } else m.loop = true;\u000a          m.play();\u000a          };\u000a      var s = eval(d.fullArgs());\u000a      if (s) {\u000a        s = s.toString();\u000a        var m = this.soundtracks[s.slice(0, s.lastIndexOf("."))];\u000a        if (m) {\u000a          if (b == "playsound") {\u000a            m.play();\u000a          } else if (b == "loopsound") {\u000a            loop(m);\u000a          } else if (b == "pausesound") {\u000a            m.pause();\u000a          } else if (b == "unloopsound") {\u000a            if (m.loop != undefined) {\u000a              m.loop = false;\u000a            } else if (m.loopfn) {\u000a              m.removeEventListener('ended', m.loopfn);\u000a              delete m.loopfn;\u000a            }\u000a          } else if (b == "stopsound") {\u000a            m.pause();\u000a            m.currentTime = 0;\u000a          } else if (b == "fadeoutsound" || b == "fadeinsound") {\u000a            if (m.interval) clearInterval(m.interval);\u000a            if (b == "fadeinsound") {\u000a              if (m.currentTime>0) return;\u000a              m.volume = 0;\u000a              loop(m);\u000a            } else {\u000a              if (!m.currentTime) return;\u000a              m.play();\u000a            }\u000a            var v = m.volume;\u000a            m.interval = setInterval(function () {\u000a              v = Math.min(1, Math.max(0, v + 0.005 * (b == "fadeinsound" ? 1 : -1)));\u000a              m.volume = Math.easeInOut(v);\u000a              if (v == 0 || v == 1) clearInterval(m.interval);\u000a              if (v == 0) {\u000a                m.pause();\u000a                m.currentTime = 0;\u000a                m.volume = 1;\u000a              }\u000a            }, 10);\u000a          }\u000a        }\u000a      }\u000a    }\u000a  }\u000a  macros['fadeinsound'] = p;\u000a  macros['fadeoutsound'] = p;\u000a  macros['unloopsound'] = p;\u000a  macros['loopsound'] = p;\u000a  macros['pausesound'] = p;\u000a  macros['stopsound'] = p;\u000a  macros['stopallsound'] = {\u000a    handler: function () {\u000a      var s = macros.playsound.soundtracks;\u000a      for (var j in s) {\u000a        var i = s[j];\u000a        i.pause();\u000a        i.currentTime = 0;\u000a      }\u000a    }\u000a  }\u000a  var div = $("storeArea").firstChild;\u000a  var fe = ["ogg", "mp3", "wav", "webm"];\u000a  while (div) {\u000a    var b = String.fromCharCode(92);\u000a    var q = '"';\u000a    var re = "['" + q + "]([^" + q + "']*?)" + b + ".(ogg|mp3|wav|webm)['" + q + "]";\u000a    k(new RegExp(re, "gi"));\u000a    div = div.nextSibling;\u000a  }\u000a\u000a  function k(c, e) {\u000a    do {\u000a      d = c.exec(div.innerHTML);\u000a      if (d) {\u000a        var a = new Audio();\u000a        if (a.canPlayType) {\u000a          for (var i = -1; i < fe.length; i += 1) {\u000a            if (i >= 0) d[2] = fe[i];\u000a            if (a.canPlayType("audio/" + d[2])) break;\u000a          }\u000a          if (i < fe.length) {\u000a            a.setAttribute("src", d[1] + "." + d[2]);\u000a            a.interval = null;\u000a            macros.playsound.soundtracks[d[1]] = a;\u000a          } else console.log("Browser can't play '" + d[1] + "'");\u000a        }\u000a      }\u000a    } while (d);\u000a  }\u000a}());\u000a
+p236
+sg20
+(lp237
+Vscript
+p238
+asg23
+g24
+((I2013
+I4
+I13
+I19
+I52
+I40
+I5
+I103
+I1
+tp239
+(dp240
+tp241
+Rp242
+sg29
+g242
+sg30
+Vaudio
+p243
+sbsa(dp244
+g12
+I00
+sg13
+(lp245
+I710
+aI570
+asg15
+(itiddlywiki
+Tiddler
+p246
+(dp247
+g18
+VMs. Tea
+p248
+sg20
+(lp249
+sg23
+g24
+((I2013
+I4
+I13
+I19
+I52
+I58
+I5
+I103
+I1
+tp250
+(dp251
+tp252
+Rp253
+sg29
+g253
+sg30
+VStoryAuthor
+p254
+sbsasS'scale'
+p255
+I1
+ss.

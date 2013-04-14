@@ -1,0 +1,463 @@
+﻿:: Start [smaufrai]
+<<set $shibe = {hp: 5, dead: false}>> <<if $over>> <<stopsound $over>> <<set $over = false>> <<endif>> <<loopsound "journ.ogg">>
+<html><div class="center red">wow</div>
+<div class="centerright green">shibe warrior gonna war</div></html>so <<cyclinglink $primary_stat "brave" "smrat">>
+
+<<cyclinglink $secondary_stat "u don kno me" "omg wow so frenz">>
+
+[[ok wow so quest]]
+
+
+:: dead [dead]
+<<stopsound $sound>> <<set $over = "shibe over.ogg">> <<playsound $over>> <html><div class="center red">wow</div>
+
+<div class="centerright green">so dead</div>
+
+<div class="centerleft blue">is this the end of shibe</div>
+
+<div class="center pink">this story is not hppay end~</div></html>
+
+[[restart|Start]]
+
+
+:: combat loop 1
+<<set $dmg = Math.floor(Math.random() * $shibe.strength) + 1>>
+
+<<set $get = Math.floor(Math.random() * $enemy.strength) + 1>>
+
+<html><div class="center blue">grrrrr</div></html>
+
+you hit for <<print $dmg>> <<set $enemy.hp -= $dmg>> <<if $enemy.hp < 1>> <<set $enemy.dead = true>> <<endif>>
+
+<html><div class="center red">omg what</div></html>
+
+enemy hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<set $shibe.dead = true>> <<endif>>
+
+
+:: cyclinglink [script]
+version.extensions["cyclinglinkMacro"]={major:3,minor:1,revision:1};macros.cyclinglink={handler:function(a,b,c){var l=Wikifier.createInternalLink(a,null);
+l.className="internalLink cyclingLink";l.setAttribute("data-cycle",0);var v="";var end=false;
+if(c.length&&c[0][0]=="$"){v=c[0].slice(1);c.shift();}if(c[c.length-1]=="end"){end=true;
+c.pop();}var h=state.history[0].variables;for(var i=0;i<c.length;i++){var on=(i==Math.max(c.indexOf(h[v]),0));
+var d=insertElement(null,"span",null,"cyclingLink"+((on)?"En":"Dis")+"abled");if(on){h[v]=c[ i ];
+l.setAttribute("data-cycle",i);}insertText(d,c[ i ]);l.appendChild(d);}l.onclick=function(){var t=this.childNodes;
+var d="cyclingLink";var u=this.getAttribute("data-cycle")-0;var m=t.length;if(end&&u==m-2){var n=this.removeChild(t[u+1]);
+n.className=d+"End";this.parentNode.replaceChild(n,this);return;}t[u].classList.toggle(d+"Enabled");
+t[u].classList.toggle(d+"Disabled");u=(u+1)%m;if(v){h[v]=c[u];}t[u].classList.toggle(d+"Enabled");
+t[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:function(){addStyle(".cyclingLinkDisabled { display:none; } ");
+}};macros.cyclinglink.init();
+
+
+
+:: ok wow so quest [intro]
+<<set $shibe.primary = $primary_stat>>
+<<if $secondary_stat == "u don kno me">> <<set $shibe.secondary = "aggressive">> <<endif>> <<if $secondary_stat == "omg wow so frenz">> <<set $shibe.secondary = "charismatic">> <<endif>> <<if $shibe.secondary == "aggressive">> <<set $shibe.strength = 5>> <<else>> <<set $shibe.strength = 3>> <<endif>>
+
+<html><div class="centerleft pink">empty</div>
+
+<div class="green">sorrow</div>
+
+<div class="right red">the fate of da kingdom</div>
+
+<div class="center pink">lol brave knight u are my onli hope</div></html>
+
+[[on da road|encounter1]]
+
+
+:: encounter1 [meetenemy1]
+<<stopsound "journ.ogg">> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>>
+
+<html><div class="center red">u want to get wit me bitch</div>
+
+<div class="centerright blue">u messin wit da wrong shibe</div></html>
+
+[[fight|fight enemy1]]
+
+[[talk|talk enemy1]]
+
+
+:: fight enemy1 [fight1]
+<<set $enemy = {strength: 2, hp: 5, dead: false}>> <<stopsound $sound>> <<set $sound = "the war warrior.ogg">> <<loopsound $sound>>
+
+<html><div class="center pink">its time</div>
+
+<br><br>
+
+<div class="right green">are you ready for shibe</div></html>
+
+[[attack|attack enemy 1]]
+
+
+:: attack enemy 1 [fight1]
+<<display "combat loop 1">>
+
+<<if $enemy.dead && !$shibe.dead>>
+[[thats what i thought|encounter2]]
+<<else>>
+<<if $shibe.dead>>
+[[wat noooooo|dead]]
+<<else>>
+[[hit me again|attack enemy 1]]
+<<endif>>
+<<endif>>
+
+
+:: CSS [stylesheet]
+.center
+{
+text-align: center;
+}
+
+.right
+{
+text-align: right;
+}
+
+.centerright
+{
+margin-left: 80%;
+}
+
+.centerleft
+{
+margin-right: 80%;
+}
+
+.red {color:red;}
+.blue {color:#AFEEEE;}
+.green {color:#8FBC8F;}
+.pink {color:#FFB6C1;}
+.black {color:black;}
+.lime {color:#7CFC00;}
+a:link {color:#00BFFF;}
+
+.passage
+{
+width: 500px;
+height: 500px;
+overflow-x: visible;
+overflow-y: visible;
+background-color: black;
+background-repeat: no-repeat;
+background-position: center;
+font-family: "Comic Sans MS";
+font-size: 1.5em;
+color: #FFEBCD;
+}
+
+.passage .content
+{
+padding: 50px 85px 50px 85px;
+}
+
+[data-tags~=smaufrai]
+{
+background-image:url('smaufrai.jpg');
+}
+
+[data-tags~=intro]
+{
+background-image:url('intro.jpg');
+}
+
+[data-tags~=meetenemy1]
+{
+background-image:url('enemy1.jpg');
+}
+
+[data-tags~=dead]
+{
+background-image:url('dead.jpg');
+}
+
+[data-tags~=fight1]
+{
+background-image:url('fight1.jpg');
+}
+
+[data-tags~=enemy2]
+{
+background-image:url('enemy2.jpg');
+}
+
+[data-tags~=enemy2ghost]
+{
+background-image:url('enemy2ghost.jpg');
+}
+
+[data-tags~=scream]
+{
+background-image:url('scream.jpg');
+}
+
+[data-tags~=treasure]
+{
+background-image:url('friends.jpg');
+}
+
+
+:: talk enemy1 [meetenemy1]
+<<if $shibe.secondary == "charismatic">>
+
+<html><div class="right green">the code of the honores</div> <br><br>
+
+<div class="pink">the way of the warriors</div> <br><br><br>
+
+<div class="center blue">shibe know respect</div></html>
+
+[[go from this place|encounter2]]
+
+<<else>>
+
+<html><div class="pink">no</div>
+
+<div class="red right">this ends now</div></html>
+
+[[take on me|fight enemy1]]
+
+<<endif>>
+
+
+:: encounter2 [enemy2]
+<<if $sound != "wheel of fate.ogg">> <<stopsound $sound>> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>> <<endif>> <html><div class="right green">wat</div>
+
+<br><br><br>
+
+<div class="red">shadow what is this</div></html>
+
+[[go look|enemy 2 ghost]]
+
+
+:: combat loop 2
+<<set $dmg = Math.floor(Math.random() * $shibe.strength) + 1>>
+
+<<set $get = Math.floor(Math.random() * $enemy.strength) + 1>>
+
+<html><div class="blue">grrrrr</div></html>
+
+you hit for <<print $dmg>> <<set $enemy.hp -= $dmg>> <<if $enemy.hp < 1>> <<set $enemy.dead = true>> <<endif>>
+
+<html><div class="red">wooooo no</div></html>
+
+ghost hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<set $shibe.dead = true>> <<endif>>
+
+
+:: audio [script]
+
+(function () {
+  version.extensions['soundMacros'] = {
+    major: 1,
+    minor: 1,
+    revision: 1
+  };
+  var p = macros['playsound'] = {
+    soundtracks: {},
+    handler: function (a, b, c, d) {
+      var loop = function (m) {
+          if (m.loop == undefined) {
+            m.loopfn = function () {
+              this.play();
+            };
+            m.addEventListener('ended', m.loopfn, 0);
+          } else m.loop = true;
+          m.play();
+          };
+      var s = eval(d.fullArgs());
+      if (s) {
+        s = s.toString();
+        var m = this.soundtracks[s.slice(0, s.lastIndexOf("."))];
+        if (m) {
+          if (b == "playsound") {
+            m.play();
+          } else if (b == "loopsound") {
+            loop(m);
+          } else if (b == "pausesound") {
+            m.pause();
+          } else if (b == "unloopsound") {
+            if (m.loop != undefined) {
+              m.loop = false;
+            } else if (m.loopfn) {
+              m.removeEventListener('ended', m.loopfn);
+              delete m.loopfn;
+            }
+          } else if (b == "stopsound") {
+            m.pause();
+            m.currentTime = 0;
+          } else if (b == "fadeoutsound" || b == "fadeinsound") {
+            if (m.interval) clearInterval(m.interval);
+            if (b == "fadeinsound") {
+              if (m.currentTime>0) return;
+              m.volume = 0;
+              loop(m);
+            } else {
+              if (!m.currentTime) return;
+              m.play();
+            }
+            var v = m.volume;
+            m.interval = setInterval(function () {
+              v = Math.min(1, Math.max(0, v + 0.005 * (b == "fadeinsound" ? 1 : -1)));
+              m.volume = Math.easeInOut(v);
+              if (v == 0 || v == 1) clearInterval(m.interval);
+              if (v == 0) {
+                m.pause();
+                m.currentTime = 0;
+                m.volume = 1;
+              }
+            }, 10);
+          }
+        }
+      }
+    }
+  }
+  macros['fadeinsound'] = p;
+  macros['fadeoutsound'] = p;
+  macros['unloopsound'] = p;
+  macros['loopsound'] = p;
+  macros['pausesound'] = p;
+  macros['stopsound'] = p;
+  macros['stopallsound'] = {
+    handler: function () {
+      var s = macros.playsound.soundtracks;
+      for (var j in s) {
+        var i = s[j];
+        i.pause();
+        i.currentTime = 0;
+      }
+    }
+  }
+  var div = $("storeArea").firstChild;
+  var fe = ["ogg", "mp3", "wav", "webm"];
+  while (div) {
+    var b = String.fromCharCode(92);
+    var q = '"';
+    var re = "['" + q + "]([^" + q + "']*?)" + b + ".(ogg|mp3|wav|webm)['" + q + "]";
+    k(new RegExp(re, "gi"));
+    div = div.nextSibling;
+  }
+
+  function k(c, e) {
+    do {
+      d = c.exec(div.innerHTML);
+      if (d) {
+        var a = new Audio();
+        if (a.canPlayType) {
+          for (var i = -1; i < fe.length; i += 1) {
+            if (i >= 0) d[2] = fe[i];
+            if (a.canPlayType("audio/" + d[2])) break;
+          }
+          if (i < fe.length) {
+            a.setAttribute("src", d[1] + "." + d[2]);
+            a.interval = null;
+            macros.playsound.soundtracks[d[1]] = a;
+          } else console.log("Browser can't play '" + d[1] + "'");
+        }
+      }
+    } while (d);
+  }
+}());
+
+
+
+:: try riddle [scream]
+<<if $riddle == "death">>
+
+<html><div class="center lime">no wrong</html>
+
+[[once more|enemy 2 ghost]]
+
+<<else>>
+
+<html><div class="center red">u may pass</html>
+
+[[at last the treasure]]
+
+<<endif>>
+
+
+:: enemy 2 ghost [enemy2ghost]
+
+<html><div class="center red">no not shibe ghost</div></html>
+
+<<if $shibe.primary == "smrat">> <html>
+
+<div class="right pink">shiba riddles</div>
+
+<div class="centerleft black">its the only way</div>
+
+<div class="center red">what is blacker than night</div>
+
+<div class="blue centerright">darker than shade</div>
+
+<div class="lime center">sharper than any blade</div></html>
+
+<<cyclinglink $riddle "death" "shibe soul">> <<if $sound != "spookshib.ogg">> <<stopsound $sound>> <<set $sound = "spookshib.ogg">> <<loopsound $sound>> <<endif>>
+
+[[i kno|try riddle]]
+
+<<else>>
+
+<html><div class="right pink">ghost fight</div>
+
+<div class="center blue">its the only way</div></html> <<set $enemy = {strength: 3, hp: 4, dead: false}>>
+
+[[take me on|attack enemy 2]]
+
+<<endif>>
+
+
+:: attack enemy 2 [scream]
+<html><div class="red">shibe this is ur most fersome foe yet</div></html>
+<<display "combat loop 2">>
+
+<<if $enemy.dead && !$shibe.dead>>
+[[at last the treasure]]
+<<else>>
+<<if $shibe.dead>>
+[[wat noooooo|dead]]
+<<else>>
+[[hit me again|attack enemy 2]]
+<<endif>>
+<<endif>>
+
+
+:: StoryTitle
+shibequest
+
+
+:: at last the treasure [treasure]
+<<stopsound $sound>> <<playsound "the bells of friendship ring true.ogg">>
+
+<html><div class="right pink">lol</div>
+
+<div class="left lime">shibe friendship</div>
+
+<div class="centerright blue">was da tru treasure all along</div>
+
+<div class="center">~end~</div></html>
+
+[[credits]]
+
+
+:: StoryAuthor
+Ms. Tea
+
+
+:: credits
+Text/etc: Ms. Tea
+Music: SF
+
+Most photos used under Creative Commons licenses.
+
+* [[smaufrai from @DogSolutions|http://twitter.com/DogSolutions/status/210836474025881600/photo/1]]
+* [[tokyo the shiba by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5958945531/]]
+* [[Shiba inu by Yuya Tamai on Flickr|http://www.flickr.com/photos/tamaiyuya/6073282904/]]
+* [[Shiba in the snow by Truk71 on Flickr|http://www.flickr.com/photos/24161110@N00/399356547/]]
+* [[shiba rinji wrestles with shiba taro by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/6174353458/]]
+* [[shiba shadow by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/7207054956/]]
+* [[Shiba #2 by atubbs on Flickr|http://www.flickr.com/photos/atubbs/3189700418/]]
+* [[taro shiba yawning by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5106890898/]]
+* [[shiba siblings (kiyom & taro) & their lazy sunday|http://www.flickr.com/photos/_tar0_/7390117678/]]
+
+<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html>
+
+
