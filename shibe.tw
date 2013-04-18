@@ -1,5 +1,11 @@
 ﻿:: Start [smaufrai]
-<<set $shibe = {hp: 5, dead: false}>> <<if $over>> <<stopsound $over>> <<set $over = false>> <<endif>> <<loopsound "journ.ogg">>
+<<silently>>
+	<<set $shibe = {hp: 5, dead: false}>>
+	<<if $over>>
+		<<stopsound $over>>
+		<<set $over = false>>
+	<<endif>>
+<<loopsound "journ.ogg">> <<endsilently>>
 <html><div class="center red">wow</div>
 <div class="centerright green">shibe warrior gonna war</div></html>so <<cyclinglink $primary_stat "brave" "smrat">>
 
@@ -9,7 +15,11 @@
 
 
 :: dead [dead]
-<<stopsound $sound>> <<set $over = "shibe over.ogg">> <<playsound $over>> <html><div class="center red">wow</div>
+<<silently>>
+	<<stopsound $sound>>
+	<<set $over = "shibe over.ogg">>
+	<<playsound $over>>
+<<endsilently>> <html><div class="center red">wow</div>
 
 <div class="centerright green">so dead</div>
 
@@ -50,8 +60,20 @@ t[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:f
 
 
 :: ok wow so quest [intro]
-<<set $shibe.primary = $primary_stat>>
-<<if $secondary_stat == "u don kno me">> <<set $shibe.secondary = "aggressive">> <<endif>> <<if $secondary_stat == "omg wow so frenz">> <<set $shibe.secondary = "charismatic">> <<endif>> <<if $shibe.secondary == "aggressive">> <<set $shibe.strength = 5>> <<else>> <<set $shibe.strength = 3>> <<endif>>
+<<silently>>
+	<<set $shibe.primary = $primary_stat>>
+	<<if $secondary_stat == "u don kno me">>
+		<<set $shibe.secondary = "aggressive">>
+	<<endif>>
+	<<if $secondary_stat == "omg wow so frenz">>
+		<<set $shibe.secondary = "charismatic">>
+	<<endif>>
+	<<if $shibe.secondary == "aggressive">>
+		<<set $shibe.strength = 5>>
+	<<else>>
+		<<set $shibe.strength = 3>>
+	<<endif>>
+<<endsilently>>
 
 <html><div class="centerleft pink">empty</div>
 
@@ -65,7 +87,11 @@ t[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:f
 
 
 :: encounter1 [meetenemy1]
-<<stopsound "journ.ogg">> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>>
+<<silently>>
+	<<stopsound "journ.ogg">>
+	<<set $sound = "wheel of fate.ogg">>
+	<<loopsound $sound>>
+<<endsilently>>
 
 <html><div class="center red">u want to get wit me bitch</div>
 
@@ -77,7 +103,12 @@ t[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:f
 
 
 :: fight enemy1 [fight1]
-<<set $enemy = {strength: 2, hp: 5, dead: false}>> <<stopsound $sound>> <<set $sound = "the war warrior.ogg">> <<loopsound $sound>>
+<<silently>>
+	<<set $enemy = {strength: 2, hp: 5, dead: false}>>
+	<<stopsound $sound>>
+	<<set $sound = "the war warrior.ogg">>
+	<<loopsound $sound>>
+<<endsilently>>
 
 <html><div class="center pink">its time</div>
 
@@ -219,7 +250,13 @@ background-image:url('friends.jpg');
 
 
 :: encounter2 [enemy2]
-<<if $sound != "wheel of fate.ogg">> <<stopsound $sound>> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>> <<endif>> <html><div class="right green">wat</div>
+<<silently>>
+	<<if $sound != "wheel of fate.ogg">>
+		<<stopsound $sound>>
+		<<set $sound = "wheel of fate.ogg">>
+		<<loopsound $sound>>
+	<<endif>>
+<<endsilently>> <html><div class="right green">wat</div>
 
 <br><br><br>
 
@@ -390,7 +427,14 @@ ghost hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<s
 
 <div class="lime center">sharper than any blade</div></html>
 
-<<cyclinglink $riddle "death" "shibe soul">> <<if $sound != "spookshib.ogg">> <<stopsound $sound>> <<set $sound = "spookshib.ogg">> <<loopsound $sound>> <<endif>>
+<<silently>>
+	<<cyclinglink $riddle "death" "shibe soul">>
+	<<if $sound != "spookshib.ogg">>
+		<<stopsound $sound>>
+		<<set $sound = "spookshib.ogg">>
+		<<loopsound $sound>>
+	<<endif>>
+<<endsilently>>
 
 [[i kno|try riddle]]
 
@@ -406,7 +450,11 @@ ghost hits for <<print $get>> <<set $shibe.hp -= $get>> <<if $shibe.hp < 1>> <<s
 
 
 :: attack enemy 2 [scream]
-<html><div class="red">shibe this is ur most fersome foe yet</div></html>
+<<silently>>
+	<<stopsound $sound>>
+	<<set $sound = "the war warrior.ogg">>
+	<<loopsound $sound>>
+<<endsilently>> <html><div class="red">shibe this is ur most fersome foe yet</div></html>
 <<display "combat loop 2">>
 
 <<if $enemy.dead && !$shibe.dead>>
@@ -446,6 +494,8 @@ Ms. Tea
 Text/etc: Ms. Tea
 Music: SF
 
+Cyclinglink macro by [[Leon Arnott|http://l.j-factor.com/twine/]].
+
 Most photos used under Creative Commons licenses.
 
 * [[smaufrai from @DogSolutions|http://twitter.com/DogSolutions/status/210836474025881600/photo/1]]
@@ -458,6 +508,6 @@ Most photos used under Creative Commons licenses.
 * [[taro shiba yawning by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5106890898/]]
 * [[shiba siblings (kiyom & taro) & their lazy sunday|http://www.flickr.com/photos/_tar0_/7390117678/]]
 
-<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html>
+<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html> Cyclinglink macro is not included in this license.
 
 
