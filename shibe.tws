@@ -263,7 +263,7 @@ Vdead
 p91
 sbsa(dp92
 g12
-I01
+I00
 sg13
 (lp93
 I290
@@ -686,7 +686,7 @@ VStoryTitle
 p220
 sbsa(dp221
 g12
-I00
+I01
 sg13
 (lp222
 I430
@@ -697,7 +697,7 @@ Tiddler
 p223
 (dp224
 g18
-VText/etc: Ms. Tea\u000aMusic: SF\u000a\u000aMost photos used under Creative Commons licenses.\u000a\u000a* [[smaufrai from @DogSolutions|http://twitter.com/DogSolutions/status/210836474025881600/photo/1]]\u000a* [[tokyo the shiba by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5958945531/]]\u000a* [[Shiba inu by Yuya Tamai on Flickr|http://www.flickr.com/photos/tamaiyuya/6073282904/]]\u000a* [[Shiba in the snow by Truk71 on Flickr|http://www.flickr.com/photos/24161110@N00/399356547/]]\u000a* [[shiba rinji wrestles with shiba taro by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/6174353458/]]\u000a* [[shiba shadow by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/7207054956/]]\u000a* [[Shiba #2 by atubbs on Flickr|http://www.flickr.com/photos/atubbs/3189700418/]]\u000a* [[taro shiba yawning by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5106890898/]]\u000a* [[shiba siblings (kiyom & taro) & their lazy sunday|http://www.flickr.com/photos/_tar0_/7390117678/]]\u000a\u000a<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html>
+VText/etc: Ms. Tea\u000aMusic: SF\u000a\u000aCyclinglink macro by [[Leon Arnott|http://l.j-factor.com/twine/]].\u000a\u000aMost photos used under Creative Commons licenses.\u000a\u000a* [[smaufrai from @DogSolutions|http://twitter.com/DogSolutions/status/210836474025881600/photo/1]]\u000a* [[tokyo the shiba by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5958945531/]]\u000a* [[Shiba inu by Yuya Tamai on Flickr|http://www.flickr.com/photos/tamaiyuya/6073282904/]]\u000a* [[Shiba in the snow by Truk71 on Flickr|http://www.flickr.com/photos/24161110@N00/399356547/]]\u000a* [[shiba rinji wrestles with shiba taro by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/6174353458/]]\u000a* [[shiba shadow by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/7207054956/]]\u000a* [[Shiba #2 by atubbs on Flickr|http://www.flickr.com/photos/atubbs/3189700418/]]\u000a* [[taro shiba yawning by _tar0_ on Flickr|http://www.flickr.com/photos/_tar0_/5106890898/]]\u000a* [[shiba siblings (kiyom & taro) & their lazy sunday|http://www.flickr.com/photos/_tar0_/7390117678/]]\u000a\u000a<html><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shibequest</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://dl.dropboxusercontent.com/u/79581979/shibe.html" property="cc:attributionName" rel="cc:attributionURL">Ms. Tea / SF</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</html> Cyclinglink macro is not included in this license.
 p225
 sg20
 (lp226
