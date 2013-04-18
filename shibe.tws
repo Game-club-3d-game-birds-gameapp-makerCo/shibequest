@@ -34,7 +34,7 @@ p16
 (dp17
 S'text'
 p18
-V<<set $shibe = {hp: 5, dead: false}>> <<if $over>> <<stopsound $over>> <<set $over = false>> <<endif>> <<loopsound "journ.ogg">>\u000a<html><div class="center red">wow</div>\u000a<div class="centerright green">shibe warrior gonna war</div></html>so <<cyclinglink $primary_stat "brave" "smrat">>\u000a\u000a<<cyclinglink $secondary_stat "u don kno me" "omg wow so frenz">>\u000a\u000a[[ok wow so quest]]
+V<<silently>>\u000a	<<set $shibe = {hp: 5, dead: false}>>\u000a	<<if $over>>\u000a		<<stopsound $over>>\u000a		<<set $over = false>>\u000a	<<endif>>\u000a<<loopsound "journ.ogg">> <<endsilently>>\u000a<html><div class="center red">wow</div>\u000a<div class="centerright green">shibe warrior gonna war</div></html>so <<cyclinglink $primary_stat "brave" "smrat">>\u000a\u000a<<cyclinglink $secondary_stat "u don kno me" "omg wow so frenz">>\u000a\u000a[[ok wow so quest]]
 p19
 sS'tags'
 p20
@@ -157,7 +157,7 @@ Tiddler
 p58
 (dp59
 g18
-V<<set $shibe.primary = $primary_stat>>\u000a<<if $secondary_stat == "u don kno me">> <<set $shibe.secondary = "aggressive">> <<endif>> <<if $secondary_stat == "omg wow so frenz">> <<set $shibe.secondary = "charismatic">> <<endif>> <<if $shibe.secondary == "aggressive">> <<set $shibe.strength = 5>> <<else>> <<set $shibe.strength = 3>> <<endif>>\u000a\u000a<html><div class="centerleft pink">empty</div>\u000a\u000a<div class="green">sorrow</div>\u000a\u000a<div class="right red">the fate of da kingdom</div>\u000a\u000a<div class="center pink">lol brave knight u are my onli hope</div></html>\u000a\u000a[[on da road|encounter1]]
+V<<silently>>\u000a	<<set $shibe.primary = $primary_stat>>\u000a	<<if $secondary_stat == "u don kno me">>\u000a		<<set $shibe.secondary = "aggressive">>\u000a	<<endif>>\u000a	<<if $secondary_stat == "omg wow so frenz">>\u000a		<<set $shibe.secondary = "charismatic">>\u000a	<<endif>>\u000a	<<if $shibe.secondary == "aggressive">>\u000a		<<set $shibe.strength = 5>>\u000a	<<else>>\u000a		<<set $shibe.strength = 3>>\u000a	<<endif>>\u000a<<endsilently>>\u000a\u000a<html><div class="centerleft pink">empty</div>\u000a\u000a<div class="green">sorrow</div>\u000a\u000a<div class="right red">the fate of da kingdom</div>\u000a\u000a<div class="center pink">lol brave knight u are my onli hope</div></html>\u000a\u000a[[on da road|encounter1]]
 p60
 sg20
 (lp61
@@ -196,7 +196,7 @@ Tiddler
 p70
 (dp71
 g18
-V<<stopsound "journ.ogg">> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>>\u000a\u000a<html><div class="center red">u want to get wit me bitch</div>\u000a\u000a<div class="centerright blue">u messin wit da wrong shibe</div></html>\u000a\u000a[[fight|fight enemy1]]\u000a\u000a[[talk|talk enemy1]]
+V<<silently>>\u000a	<<stopsound "journ.ogg">>\u000a	<<set $sound = "wheel of fate.ogg">>\u000a	<<loopsound $sound>>\u000a<<endsilently>>\u000a\u000a<html><div class="center red">u want to get wit me bitch</div>\u000a\u000a<div class="centerright blue">u messin wit da wrong shibe</div></html>\u000a\u000a[[fight|fight enemy1]]\u000a\u000a[[talk|talk enemy1]]
 p72
 sg20
 (lp73
@@ -235,7 +235,7 @@ Tiddler
 p82
 (dp83
 g18
-V<<stopsound $sound>> <<set $over = "shibe over.ogg">> <<playsound $over>> <html><div class="center red">wow</div>\u000a\u000a<div class="centerright green">so dead</div>\u000a\u000a<div class="centerleft blue">is this the end of shibe</div>\u000a\u000a<div class="center pink">this story is not hppay end~</div></html>\u000a\u000a[[restart|Start]]
+V<<silently>>\u000a	<<stopsound $sound>>\u000a	<<set $over = "shibe over.ogg">>\u000a	<<playsound $over>>\u000a<<endsilently>> <html><div class="center red">wow</div>\u000a\u000a<div class="centerright green">so dead</div>\u000a\u000a<div class="centerleft blue">is this the end of shibe</div>\u000a\u000a<div class="center pink">this story is not hppay end~</div></html>\u000a\u000a[[restart|Start]]
 p84
 sg20
 (lp85
@@ -274,7 +274,7 @@ Tiddler
 p94
 (dp95
 g18
-V<<set $enemy = {strength: 2, hp: 5, dead: false}>> <<stopsound $sound>> <<set $sound = "the war warrior.ogg">> <<loopsound $sound>>\u000a\u000a<html><div class="center pink">its time</div>\u000a\u000a<br><br>\u000a\u000a<div class="right green">are you ready for shibe</div></html>\u000a\u000a[[attack|attack enemy 1]]
+V<<silently>>\u000a	<<set $enemy = {strength: 2, hp: 5, dead: false}>>\u000a	<<stopsound $sound>>\u000a	<<set $sound = "the war warrior.ogg">>\u000a	<<loopsound $sound>>\u000a<<endsilently>>\u000a\u000a<html><div class="center pink">its time</div>\u000a\u000a<br><br>\u000a\u000a<div class="right green">are you ready for shibe</div></html>\u000a\u000a[[attack|attack enemy 1]]
 p96
 sg20
 (lp97
@@ -428,7 +428,7 @@ Tiddler
 p141
 (dp142
 g18
-V<<if $sound != "wheel of fate.ogg">> <<stopsound $sound>> <<set $sound = "wheel of fate.ogg">> <<loopsound $sound>> <<endif>> <html><div class="right green">wat</div>\u000a\u000a<br><br><br>\u000a\u000a<div class="red">shadow what is this</div></html>\u000a\u000a[[go look|enemy 2 ghost]]
+V<<silently>>\u000a	<<if $sound != "wheel of fate.ogg">>\u000a		<<stopsound $sound>>\u000a		<<set $sound = "wheel of fate.ogg">>\u000a		<<loopsound $sound>>\u000a	<<endif>>\u000a<<endsilently>> <html><div class="right green">wat</div>\u000a\u000a<br><br><br>\u000a\u000a<div class="red">shadow what is this</div></html>\u000a\u000a[[go look|enemy 2 ghost]]
 p143
 sg20
 (lp144
@@ -467,7 +467,7 @@ Tiddler
 p153
 (dp154
 g18
-V\u000a<html><div class="center red">no not shibe ghost</div></html>\u000a\u000a<<if $shibe.primary == "smrat">> <html>\u000a\u000a<div class="right pink">shiba riddles</div>\u000a\u000a<div class="centerleft black">its the only way</div>\u000a\u000a<div class="center red">what is blacker than night</div>\u000a\u000a<div class="blue centerright">darker than shade</div>\u000a\u000a<div class="lime center">sharper than any blade</div></html>\u000a\u000a<<cyclinglink $riddle "death" "shibe soul">> <<if $sound != "spookshib.ogg">> <<stopsound $sound>> <<set $sound = "spookshib.ogg">> <<loopsound $sound>> <<endif>>\u000a\u000a[[i kno|try riddle]]\u000a\u000a<<else>>\u000a\u000a<html><div class="right pink">ghost fight</div>\u000a\u000a<div class="center blue">its the only way</div></html> <<set $enemy = {strength: 3, hp: 4, dead: false}>>\u000a\u000a[[take me on|attack enemy 2]]\u000a\u000a<<endif>>
+V\u000a<html><div class="center red">no not shibe ghost</div></html>\u000a\u000a<<if $shibe.primary == "smrat">> <html>\u000a\u000a<div class="right pink">shiba riddles</div>\u000a\u000a<div class="centerleft black">its the only way</div>\u000a\u000a<div class="center red">what is blacker than night</div>\u000a\u000a<div class="blue centerright">darker than shade</div>\u000a\u000a<div class="lime center">sharper than any blade</div></html>\u000a\u000a<<silently>>\u000a	<<cyclinglink $riddle "death" "shibe soul">>\u000a	<<if $sound != "spookshib.ogg">>\u000a		<<stopsound $sound>>\u000a		<<set $sound = "spookshib.ogg">>\u000a		<<loopsound $sound>>\u000a	<<endif>>\u000a<<endsilently>>\u000a\u000a[[i kno|try riddle]]\u000a\u000a<<else>>\u000a\u000a<html><div class="right pink">ghost fight</div>\u000a\u000a<div class="center blue">its the only way</div></html> <<set $enemy = {strength: 3, hp: 4, dead: false}>>\u000a\u000a[[take me on|attack enemy 2]]\u000a\u000a<<endif>>
 p155
 sg20
 (lp156
