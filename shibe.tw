@@ -73,6 +73,9 @@ t[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:f
 	<<else>>
 		<<set $shibe.strength = 3>>
 	<<endif>>
+	<<if $shibe.primary == "brave">>
+		<<set $shibe.hp += 2>>
+	<<endif>>
 <<endsilently>>
 
 <html><div class="centerleft pink">empty</div>

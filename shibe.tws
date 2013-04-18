@@ -20,7 +20,7 @@ p9
 (dp11
 S'selected'
 p12
-I00
+I01
 sS'pos'
 p13
 (lp14
@@ -157,7 +157,7 @@ Tiddler
 p58
 (dp59
 g18
-V<<silently>>\u000a	<<set $shibe.primary = $primary_stat>>\u000a	<<if $secondary_stat == "u don kno me">>\u000a		<<set $shibe.secondary = "aggressive">>\u000a	<<endif>>\u000a	<<if $secondary_stat == "omg wow so frenz">>\u000a		<<set $shibe.secondary = "charismatic">>\u000a	<<endif>>\u000a	<<if $shibe.secondary == "aggressive">>\u000a		<<set $shibe.strength = 5>>\u000a	<<else>>\u000a		<<set $shibe.strength = 3>>\u000a	<<endif>>\u000a<<endsilently>>\u000a\u000a<html><div class="centerleft pink">empty</div>\u000a\u000a<div class="green">sorrow</div>\u000a\u000a<div class="right red">the fate of da kingdom</div>\u000a\u000a<div class="center pink">lol brave knight u are my onli hope</div></html>\u000a\u000a[[on da road|encounter1]]
+V<<silently>>\u000a	<<set $shibe.primary = $primary_stat>>\u000a	<<if $secondary_stat == "u don kno me">>\u000a		<<set $shibe.secondary = "aggressive">>\u000a	<<endif>>\u000a	<<if $secondary_stat == "omg wow so frenz">>\u000a		<<set $shibe.secondary = "charismatic">>\u000a	<<endif>>\u000a	<<if $shibe.secondary == "aggressive">>\u000a		<<set $shibe.strength = 5>>\u000a	<<else>>\u000a		<<set $shibe.strength = 3>>\u000a	<<endif>>\u000a	<<if $shibe.primary == "brave">>\u000a		<<set $shibe.hp += 2>>\u000a	<<endif>>\u000a<<endsilently>>\u000a\u000a<html><div class="centerleft pink">empty</div>\u000a\u000a<div class="green">sorrow</div>\u000a\u000a<div class="right red">the fate of da kingdom</div>\u000a\u000a<div class="center pink">lol brave knight u are my onli hope</div></html>\u000a\u000a[[on da road|encounter1]]
 p60
 sg20
 (lp61
@@ -686,7 +686,7 @@ VStoryTitle
 p220
 sbsa(dp221
 g12
-I01
+I00
 sg13
 (lp222
 I430
