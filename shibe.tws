@@ -224,7 +224,7 @@ Vencounter1
 p79
 sbsa(dp80
 g12
-I01
+I00
 sg13
 (lp81
 I150
@@ -263,7 +263,7 @@ Vdead
 p91
 sbsa(dp92
 g12
-I00
+I01
 sg13
 (lp93
 I290
@@ -582,7 +582,7 @@ Tiddler
 p188
 (dp189
 g18
-V<html><div class="red">shibe this is ur most fersome foe yet</div></html>\u000a<<display "combat loop 2">>\u000a\u000a<<if $enemy.dead && !$shibe.dead>>\u000a[[at last the treasure]]\u000a<<else>>\u000a<<if $shibe.dead>>\u000a[[wat noooooo|dead]]\u000a<<else>>\u000a[[hit me again|attack enemy 2]]\u000a<<endif>>\u000a<<endif>>
+V<<silently>>\u000a	<<stopsound $sound>>\u000a	<<set $sound = "the war warrior.ogg">>\u000a	<<loopsound $sound>>\u000a<<endsilently>> <html><div class="red">shibe this is ur most fersome foe yet</div></html>\u000a<<display "combat loop 2">>\u000a\u000a<<if $enemy.dead && !$shibe.dead>>\u000a[[at last the treasure]]\u000a<<else>>\u000a<<if $shibe.dead>>\u000a[[wat noooooo|dead]]\u000a<<else>>\u000a[[hit me again|attack enemy 2]]\u000a<<endif>>\u000a<<endif>>
 p190
 sg20
 (lp191
